@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Laboratorio Virtual: Diagramas de Movimiento</title>
+
+  <!-- Estilos CSS -->
+  <style>
+    body {
+      font-family: sans-serif;
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h1, h2, h3 {
+      text-align: center;
+    }
+    .encabezado {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .pregunta {
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 1em;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005e99;
+    }
+    #resultado {
+      font-weight: bold;
+      color: green;
+      margin-top: 20px;
+      text-align: center;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      border-radius: 8px;
+    }
+  </style>
+
+  <!-- MathJax para fórmulas -->
+  <script>
+    MathJax = {
+      tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+      svg: { fontCache: 'global' }
+    };
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"  async></script>
+</head>
+<body>
+
+  <!-- Encabezado -->
+  <div class="encabezado">
+    <h1>Laboratorio Virtual: Diagramas de Movimiento</h1>
+    <p><strong>Autor:</strong> Hayzar Hernández Bustos – IED Los Rosales</p>
+    <p><strong>Fecha límite de entrega:</strong> 31 de mayo de 2025</p>
+  </div>
+
+  <!-- Simulación Interactiva -->
+  <div class="pregunta" style="background: #e6f7ff;">
+    <h2>Simulación: Diagramas de Movimiento</h2>
+    <p><strong>Instrucciones:</strong> Explora la simulación interactiva a continuación. Puedes:</p>
+    <ul>
+      <li>Cambiar entre velocidad constante y aceleración constante.</li>
+      <li>Ver cómo se representan gráficamente los movimientos.</li>
+      <li>Observar cómo cambia la separación entre puntos al variar la velocidad o aceleración.</li>
+    </ul>
+    <iframe src="https://physics.bu.edu/~duffy/HTML5/oneDmotion_constantv_constanta.html"></iframe> 
+  </div>
+
+  <!-- Instrucciones para responder -->
+  <div class="pregunta">
+    <h3>Instrucciones para responda el test</h3>
+    <ol>
+      <li>Explora la simulación durante unos minutos.</li>
+      <li>Selecciona "Constant velocity" y observa cómo se distribuyen los puntos.</li>
+      <li>Luego selecciona "Constant acceleration" y compara.</li>
+      <li>Responde cada pregunta basándote en lo que observaste.</li>
+    </ol>
+  </div>
+
+  <!-- Datos del estudiante -->
+  <div class="pregunta">
+    <p>Nombre completo:</p>
+    <input type="text" id="nombre" name="nombre" required>
+  </div>
+  <div class="pregunta">
+    <p>Grado:</p>
+    <input type="text" id="grado" name="grado" required>
+  </div>
+
+  <h2>Responda seleccionando una única opción por pregunta</h2>
+
+  <!-- Formulario -->
+  <form id="formulario">
+
+    <!-- PREGUNTA 1 -->
+    <div class="pregunta">
+      <p><strong>Competencia:</strong> Explicación de fenómenos (EF)</p>
+      <p><strong>Contexto:</strong> En la simulación, selecciona “Constant velocity”.</p>
+      <p>1. ¿Cómo es la separación entre los puntos que representan la posición del objeto a través del tiempo?</p>
+      <input type="radio" name="p1" value="a"> A. Disminuye progresivamente<br>
+      <input type="radio" name="p1" value="b"> B. Aumenta progresivamente<br>
+      <input type="radio" name="p1" value="c"> C. Es siempre la misma<br>
+      <input type="radio" name="p1" value="d"> D. No hay puntos visibles<br>
+    </div>
+
+    <!-- PREGUNTA 2 -->
+    <div class="pregunta">
+      <p><strong>Competencia:</strong> Aplicación de conceptos (AC)</p>
+      <p><strong>Contexto:</strong> En la simulación, selecciona “Constant acceleration”.</p>
+      <p>2. ¿Qué tipo de curva representa la posición del objeto en función del tiempo?</p>
+      <input type="radio" name="p2" value="a"> A. Una línea recta horizontal<br>
+      <input type="radio" name="p2" value="b"> B. Una parábola<br>
+      <input type="radio" name="p2" value="c"> C. Una línea recta inclinada<br>
+      <input type="radio" name="p2" value="d"> D. Una línea quebrada<br>
+    </div>
+
+    <!-- PREGUNTA 3 -->
+    <div class="pregunta">
+      <p><strong>Competencia:</strong> Resolución de problemas (RP)</p>
+      <p><strong>Contexto:</strong> Al activar la opción de aceleración constante, se muestra una flecha roja.</p>
+      <p>3. ¿Qué representa esa flecha?</p>
+      <input type="radio" name="p3" value="a"> A. La dirección de la posición<br>
+      <input type="radio" name="p3" value="b"> B. La dirección de la velocidad<br>
+      <input type="radio" name="p3" value="c"> C. La dirección de la aceleración<br>
+      <input type="radio" name="p3" value="d"> D. La masa del objeto<br>
+    </div>
+
+    <!-- PREGUNTA 4 -->
+    <div class="pregunta">
+      <p><strong>Competencia:</strong> Explicación de fenómenos (EF)</p>
+      <p><strong>Contexto:</strong> En la simulación, si aumentas la velocidad inicial manteniendo la aceleración en cero...</p>
+      <p>4. ¿Qué sucede con la distancia recorrida por el objeto en el mismo intervalo de tiempo?</p>
+      <input type="radio" name="p4" value="a"> A. Disminuye<br>
+      <input type="radio" name="p4" value="b"> B. Permanece igual<br>
+      <input type="radio" name="p4" value="c"> C. Aumenta<br>
+      <input type="radio" name="p4" value="d"> D. Se vuelve negativa<br>
+    </div>
+
+    <!-- PREGUNTA 5 -->
+    <div class="pregunta">
+      <p><strong>Competencia:</strong> Aplicación de conceptos (AC)</p>
+      <p><strong>Contexto:</strong> En el modo de aceleración constante, la velocidad del objeto...</p>
+      <p>5. ¿Cómo cambia con el tiempo?</p>
+      <input type="radio" name="p5" value="a"> A. Aumenta uniformemente<br>
+      <input type="radio" name="p5" value="b"> B. Disminuye uniformemente<br>
+      <input type="radio" name="p5" value="c"> C. Permanece constante<br>
+      <input type="radio" name="p5" value="d"> D. Cambia aleatoriamente<br>
+    </div>
+
+    <!-- PREGUNTA 6 -->
+    <div class="pregunta">
+      <p><strong>Competencia:</strong> Explicación de fenómenos (EF)</p>
+      <p><strong>Contexto:</strong> En la simulación, selecciona “Constant velocity”.</p>
+      <p>6. ¿Qué puedes decir sobre la velocidad del objeto en este modo?</p>
+      <input type="radio" name="p6" value="a"> A. Está disminuyendo<br>
+      <input type="radio" name="p6" value="b"> B. Está aumentando<br>
+      <input type="radio" name="p6" value="c"> C. Es constante<br>
+      <input type="radio" name="p6" value="d"> D. Es cero<br>
+    </div>
+
+    <!-- PREGUNTA 7 -->
+    <div class="pregunta">
+      <p><strong>Competencia:</strong> Aplicación de conceptos (AC)</p>
+      <p><strong>Contexto:</strong> En la simulación, selecciona “Constant acceleration”.</p>
+      <p>7. ¿Qué puedes decir sobre la aceleración del objeto en este modo?</p>
+      <input type="radio" name="p7" value="a"> A. Es cero<br>
+      <input type="radio" name="p7" value="b"> B. Es positiva y constante<br>
+      <input type="radio" name="p7" value="c"> C. Varía con el tiempo<br>
+      <input type="radio" name="p7" value="d"> D. Es negativa y variable<br>
+    </div>
+
+    <!-- PREGUNTA 8 -->
+    <div class="pregunta">
+      <p><strong>Competencia:</strong> Resolución de problemas (RP)</p>
+      <p><strong>Contexto:</strong> En la simulación, si duplicas la velocidad inicial manteniendo todo lo demás igual...</p>
+      <p>8. ¿Qué sucede con la distancia total recorrida en el mismo tiempo?</p>
+      <input type="radio" name="p8" value="a"> A. Se reduce a la mitad<br>
+      <input type="radio" name="p8" value="b"> B. Se duplica<br>
+      <input type="radio" name="p8" value="c"> C. Se cuadruplica<br>
+      <input type="radio" name="p8" value="d"> D. No cambia<br>
+    </div>
+
+    <!-- PREGUNTA 9 -->
+    <div class="pregunta">
+      <p><strong>Competencia:</strong> Explicación de fenómenos (EF)</p>
+      <p><strong>Contexto:</strong> En la simulación, selecciona “Constant acceleration”.</p>
+      <p>9. ¿Cómo es la separación entre los puntos que representan la posición del objeto a través del tiempo?</p>
+      <input type="radio" name="p9" value="a"> A. Siempre la misma<br>
+      <input type="radio" name="p9" value="b"> B. Aumenta progresivamente<br>
+      <input type="radio" name="p9" value="c"> C. Disminuye progresivamente<br>
+      <input type="radio" name="p9" value="d"> D. Desaparecen los puntos<br>
+    </div>
+
+    <!-- PREGUNTA 10 -->
+    <div class="pregunta">
+      <p><strong>Competencia:</strong> Aplicación de conceptos (AC)</p>
+      <p><strong>Contexto:</strong> En la simulación, si la aceleración es positiva y la velocidad inicial también...</p>
+      <p>10. ¿Qué tipo de movimiento describe el objeto?</p>
+      <input type="radio" name="p10" value="a"> A. Movimiento uniforme<br>
+      <input type="radio" name="p10" value="b"> B. Movimiento acelerado<br>
+      <input type="radio" name="p10" value="c"> C. Movimiento desacelerado<br>
+      <input type="radio" name="p10" value="d"> D. Sin movimiento<br>
+    </div>
+
+    <!-- Botón de envío -->
+    <button type="button" onclick="evaluar()">Enviar respuestas</button>
+  </form>
+
+  <!-- Resultado -->
+  <div id="resultado"></div>
+
+  <!-- Script de evaluación -->
+  <script>
+    function evaluar() {
+      const respuestasCorrectas = {
+        p1: 'c', p2: 'b', p3: 'c', p4: 'c', p5: 'a',
+        p6: 'c', p7: 'b', p8: 'b', p9: 'b', p10: 'b'
+      };
+
+      let puntaje = 0;
+      let datos = {};
+      const nombre = document.getElementById("nombre").value.trim();
+      const grado = document.getElementById("grado").value.trim();
+
+      if (!nombre || !grado) {
+        alert("Por favor completa tu nombre y grado antes de enviar.");
+        return;
+      }
+
+      datos['nombre'] = nombre;
+      datos['grado'] = grado;
+      datos['evaluacion'] = 'Diagramas de Movimiento';
+
+      for (let key in respuestasCorrectas) {
+        const seleccion = document.querySelector(`input[name="${key}"]:checked`);
+        if (seleccion) {
+          datos[key] = seleccion.value;
+          if (seleccion.value === respuestasCorrectas[key]) {
+            puntaje++;
+          }
+        } else {
+          datos[key] = '';
+        }
+      }
+
+      datos['puntaje'] = puntaje;
+      const notaSobre5 = (puntaje / 10) * 5;
+      datos['nota_sobre_5'] = notaSobre5.toFixed(2);
+      datos['timestamp'] = new Date().toISOString();
+
+      document.getElementById("resultado").innerHTML = `Tu puntaje es: ${puntaje} / 10. Nota (0-5): ${notaSobre5.toFixed(2)}`;
+
+      fetch('https://script.google.com/macros/s/AKfycbzftkC2JTIILgmLdf8rEWhSwbZvLNS6pv1dwVQuPm2Pc3wpz199YfjuhYWMbHHEjZtZ/exec',  {
+        method: 'POST',
+        mode: 'no-cors',
+        cache: 'no-cache',
+        redirect: 'follow',
+        referrerPolicy: 'no-referrer',
+        body: JSON.stringify(datos)
+      })
+      .then(() => {
+        console.log("Datos enviados.");
+        alert("Respuestas enviadas correctamente. Tu puntaje es: " + puntaje + "/10. Nota: " + notaSobre5.toFixed(2));
+      })
+      .catch(error => {
+        console.error('Error al enviar datos:', error);
+        alert('Hubo un error al enviar tus respuestas. Por favor, inténtalo de nuevo o contacta al profesor.');
+      });
+    }
+  </script>
+
+</body>
+</html>
